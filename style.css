@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.section {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 100vh;
+}
+
+#section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section-1 div {
+    width: 50%;
+    text-align: center;
+    color: rgb(224, 221, 221);
+    line-height: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+}
+
+#section-1 h1 {
+    font-size: 35px;
+}
+
+#section-2 #about-me, #portfolio {
+    width: 75%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+#section-2 #about-me {
+    /* border: 1px solid blue; */
+    padding: 50px 0 50px 0;
+}
+
+#portfolio h1 {
+    padding-bottom: 50px;
+    /* border: 1px solid red; */
+}
+
+#section-2 #portfolio #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 40px;
+    transition: transform 1s;
+}
+
+#grid .item h6:first-of-type {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+#grid .item:hover {
+    border: 1px solid red;
+    animation: flip-with-scale;
+    animation-duration: 3s;
+    filter: brightness(0.4);
+    
+}
+
+#section-2 #portfolio #grid img {
+    width: 100%;
+    height: 170px;
+    border-radius: 5px;
+    /* border: 1px solid salmon; */
+}
+
+#section-2 {
+    /* border: 1px solid green; */
+}
+#section-3 {
+    width: 100%;
+    height: 25vh;
+    /* border: 1px solid red; */
+    background-color: #26262A;
+    margin-top: 50px;
+}
+
+#section-3 div {
+    /* border: 1px solid white; */
+    width: 50%;
+    margin: 0px auto 0 auto;
+    padding-top: 55px;
+    text-align: center;
+    color: rgba(255,255,255,.7);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+}
+
+#social-icons {
+    list-style: none;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+}
+
+.fa {
+    background-color: #26262A;
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 20px;
+    /* border: 1px solid white; */
+}
+
+@keyframes flip-with-scale {
+    0% {
+        transform:perspective(400px) scaleX(1);
+    }
+    100% {
+        transform:perspective(400px) scaleX(-1);
+    }
+}
+
