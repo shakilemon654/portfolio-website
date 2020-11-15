@@ -5,15 +5,11 @@
     font-family: 'Merriweather', serif;
 }
 
-.section {
-    /* border: 1px solid red; */
+#section-1 {
     width: 100%;
     min-height: 100vh;
-}
-
-#section-1 {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     background-image: url(https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
@@ -34,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #section-1 h1 {
@@ -53,6 +49,7 @@ nav {
     position: absolute;
     z-index: 10;
     top: 0;
+    /* border: 1px solid red; */
 }
 
 nav img {
@@ -62,11 +59,6 @@ nav img {
 
 .nav-ul {
     list-style: none;
-    display: flex;
-    padding: 0px;
-}
-
-.nav-ul.show {
     display: flex;
 }
 
@@ -88,6 +80,10 @@ nav img {
 
 .hamburger:hover {
     outline: none;
+}
+
+#section-2 {
+    /* border: 1px solid green; */
 }
 
 #section-2 #about-me, #portfolio {
@@ -113,7 +109,9 @@ nav img {
     grid-gap: 40px;
     transition: transform 1s;
 }
-
+.item{
+    /* border: 1px solid red; */
+}
 #grid .item h6:first-of-type {
     margin: 10px 0 10px 0;
     font-size: 20px;
@@ -135,9 +133,6 @@ nav img {
     /* border: 1px solid salmon; */
 }
 
-#section-2 {
-    /* border: 1px solid green; */
-}
 #section-3 {
     width: 100%;
     /* border: 1px solid red; */
@@ -188,11 +183,31 @@ nav img {
 @media screen and (max-width: 750px){
     .nav-ul {
         display: none;
-        flex-direction: column;
         width: 100%;
     }
 
+    .nav-ul li{
+        padding-bottom: 10px;
+    }
+
+    .nav-ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.show {
+        background-color: black;
+        opacity: 0.6;
+    }
+
     .hamburger {
-        display: block;
+        display: block ;
+    }
+}
+
+@media screen and (max-width: 604px){
+    #section-2 #portfolio #grid img {
+        height: auto;
     }
 }
