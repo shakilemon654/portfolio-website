@@ -33,9 +33,17 @@
     /* position: absolute; */
 }
 
-#section-1 h1 {
-    font-size: 35px;
-    line-height: 35px;
+#section-1 div p {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+#section-1 div p:nth-child(3) {
+    display: none;
+    animation: typing-text 5s;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 nav {
@@ -171,12 +179,37 @@ nav img {
     /* border: 1px solid white; */
 }
 
+.scroll-to-top {
+    background-color: transparent;
+    color: salmon;
+    border: 1px solid salmon;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* z-index: 99; */
+    display: none;
+    cursor: pointer;
+    
+}
+
 @keyframes flip-with-scale {
     0% {
         transform:perspective(400px) scaleX(1);
     }
     100% {
         transform:perspective(400px) scaleX(-1);
+    }
+}
+
+@keyframes typing-text {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 27ch;
     }
 }
 

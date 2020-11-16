@@ -15,10 +15,11 @@
     <section id="section-1" class="section">
         <!---navbar-->
         <nav>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Apple_logo_dark_grey.svg/1200px-Apple_logo_dark_grey.svg.png" alt="logo">
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>    
-            </button>
+            <img src="https://i.pinimg.com/originals/4d/77/1d/4d771da7b8167d5c30c8951a669e8589.jpg" alt="logo">
+            <!--Hamburger Icon-->
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list hamburger" id="hamburger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
             <ul class="nav-ul" id="nav-ul">
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="">Features</a></li>
@@ -27,9 +28,9 @@
         </nav>
 
         <div>
-            <h1>Shakil Ahmed</h1>
-            <h3>Full Stack Web Developer</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem consequatur autem sapiente omnis esse magni dolor explicabo debitis laudantium sequi!</p>
+            <p>Shakil Ahmed</p>
+            <p>Full Stack Web Developer</p>
+            <p>Treat People With Kindness.</p>
         </div>
     </section>
 
@@ -68,7 +69,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
                 <div class="item">
-                    <img src="https://www.begindot.com/wp-content/uploads/2019/01/Login-and-registration-form.png" alt="">
+                    <img src="https://uicookies.com/wp-content/uploads/2019/09/css-contact-form-1000x750.jpg" alt="">
                     <h6>Form Design</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
@@ -89,6 +90,12 @@
             </ul>   
         </div>
     </section>
+    
+    <!--Scroll to top button-->
+    <!-- <button id="scroll-to-top" onclick="scrollToTop()"> -->
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up-short scroll-to-top" id="scroll-to-top" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/></svg>
+    <!-- </button> -->
 </body>
 </html>
 
@@ -97,4 +104,25 @@
         $('nav, #nav-ul').toggleClass('show');
         console.log('clicked');
     })
+
+    // showing scroll-to-top button
+    $(window).scroll(function(){
+        if (document.body.scrollTop > 40 ||
+        document.documentElement.scrollTop > 40) {
+            $('#scroll-to-top').css('display', 'block');
+        } else {
+            $('#scroll-to-top').css('display', 'none');
+        }
+    })
+
+    // When the user clicks on the button, scroll to the top of the document
+    $('#scroll-to-top').on('click', function(){
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari 
+    })
+
+    // Text Animation Start Time
+    setTimeout(function(){
+        $('#section-1 div p:nth-child(3)').css('display', 'block');
+    }, 2000);
 </script>
