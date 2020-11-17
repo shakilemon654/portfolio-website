@@ -144,16 +144,21 @@ nav img {
 
 /* Section 3 */
 #section-3 {
-    background-color: #00A2DD;
+    /* background-color: #00A2DD; */
+    background-image:url(https://images-na.ssl-images-amazon.com/images/I/61i%2BTvnalgL._AC_SL1000_.jpg) ;
     opacity: 0.8;
     margin-top: 50px;
-    padding-bottom: 50px;
+}
+
+.layer {
+    background-color: #00A2DD;
+    opacity: 0.8;
 }
 
 #section-3 h1 {
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     color: white;
 }
 
@@ -162,11 +167,14 @@ nav img {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 70px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-row-gap: 20px;
     color: white;
+    filter: brightness(1);
+    
 }
 
 .skill-text {
@@ -324,16 +332,15 @@ nav img {
 
 /* Contact.html page style*/
 .contact-page-body {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     background-color: #F7F8FC;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     /* background-image: url(https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/b9979371-d71d-49d1-a0d9-ec349e285347/paisajes-33.jpg); */
-    background-repeat: none;
-
+    /* background-repeat: none; */
 }
 
 .contact-form-area {
@@ -345,6 +352,7 @@ nav img {
     box-shadow: 0px 0px 10px #cccccc;
     background-color: white;
     height: auto;
+    /* border: 1px solid red; */
 }
 
 .grid-container {
