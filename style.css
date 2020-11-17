@@ -277,7 +277,7 @@ nav img {
 }
 
 .element input, textarea {
-    display: block;
+    /* display: block; */
     padding: 8px;
     margin-top: 8px;
     width: 100%;
@@ -289,6 +289,7 @@ nav img {
     background-color: #5457FF;
     color: white;
     border: none;
+    height: 40px;
 }
 .element label {
     font-size: 13px;
