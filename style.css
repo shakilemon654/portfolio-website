@@ -324,8 +324,8 @@ nav img {
 
 /* Contact.html page style*/
 .contact-page-body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #F7F8FC;
     display: flex;
     flex-direction: column;
