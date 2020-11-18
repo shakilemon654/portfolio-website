@@ -43,33 +43,69 @@
         <div id="portfolio">
             <h1>Portfolio</h1>
             <div id="grid">
-                <div class="item">
-                    <img src="images/weather-api.JPG" alt="">
+                <div class="item" id="item1">
+                    <div class="project-div">
+                        <img src="images/weather-api.JPG" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button><a href="https://shakilemon654.github.io/weather-api/"><span>Open</span></a></button>   
+                        </div>
+                    </div>
                     <h6>Weather API</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
-                <div class="item">
-                    <img src="https://images.pexels.com/photos/6320/smartphone-vintage-technology-music.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                <div class="item" id="item2">
+                    <div class="project-div">
+                        <img src="https://images.pexels.com/photos/6320/smartphone-vintage-technology-music.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button><a href="https://shakilemon654.github.io/hard-rock/">Open</a></button>   
+                        </div>
+                    </div>
                     <h6>Music API</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
-                <div class="item">
-                    <img src="https://images.pexels.com/photos/5632386/pexels-photo-5632386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                <div class="item" id="item3">
+                    <div class="project-div">
+                        <img src="https://images.pexels.com/photos/5632386/pexels-photo-5632386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button><a href="https://shakilemon654.github.io/gadgets-ecommerce/">Open</a></button>   
+                        </div>
+                    </div>
                     <h6>E-commerce site</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
-                <div class="item">
-                    <img src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                <div class="item" id="item4">
+                    <div class="project-div">
+                        <img src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button><a href="https://shakilemon654.github.io/e-school-project/">Open</a></button>   
+                        </div>
+                    </div>
                     <h6>E-learning site</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
-                <div class="item">
-                    <img src="https://file.mockplus.com/image/2019/05/b1ad8d7a-a73d-4a40-b3ad-79ee83dbe95a.png" alt="">
+                <div class="item" id="item5">
+                    <div class="project-div">
+                        <img src="https://file.mockplus.com/image/2019/05/b1ad8d7a-a73d-4a40-b3ad-79ee83dbe95a.png" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button>Open</button>   
+                        </div>
+                    </div>
                     <h6>Shopping Card Design</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
-                <div class="item">
-                    <img src="https://uicookies.com/wp-content/uploads/2019/09/css-contact-form-1000x750.jpg" alt="">
+                <div class="item" id="item6">
+                    <div class="project-div">
+                        <img src="https://uicookies.com/wp-content/uploads/2019/09/css-contact-form-1000x750.jpg" alt="">
+                        <div class="project-link-div">
+                            <p>Project Link</p> 
+                            <button>Open</button>   
+                        </div>
+                    </div>
                     <h6>Form Design</h6>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, autem.</p>
                 </div>
@@ -204,4 +240,30 @@
     setTimeout(function(){
         $('#section-1 div p:nth-child(3)').css('display', 'block');
     }, 1000);
+
+    // Showing Project Link Div
+    $('#item1').on('mouseenter', function(){
+        $('#item1 .project-link-div').css('display', 'block');
+    })
+    $('#item2').on('mouseenter', function(){
+        $('#item2 .project-link-div').css('display', 'block');
+    })
+    $('#item3').on('mouseenter', function(){
+        $('#item3 .project-link-div').css('display', 'block');
+    })
+    $('#item4').on('mouseenter', function(){
+        $('#item4 .project-link-div').css('display', 'block');
+    })
+    $('#item5').on('mouseenter', function(){
+        $('#item5 .project-link-div').css('display', 'block');
+    })
+    $('#item6').on('mouseenter', function(){
+        $('#item6 .project-link-div').css('display', 'block');
+    })
+
+    // Hiding Project Link Div
+    $('.item').on('mouseleave', function(){
+        $('.project-link-div').css('display', 'none');
+    })
+
 </script>

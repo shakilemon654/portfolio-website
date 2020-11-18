@@ -118,22 +118,60 @@ nav img {
     grid-gap: 40px;
     transition: transform 1s;
 }
-.item{
-    /* border: 1px solid red; */
-}
+
 #grid .item h6:first-of-type {
     margin: 10px 0 10px 0;
     font-size: 20px;
     font-weight: 550;
 }
 
-/* #grid .item:hover {
-    border: 1px solid red;
-    animation: flip-with-scale;
-    animation-duration: 3s;
-    filter: brightness(0.4);
-    
-} */
+#grid .item:hover img {
+    opacity: 0.2; 
+}
+
+.project-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-link-div {
+    display: none;
+    position: absolute;
+}
+
+.noHover {
+    pointer-events: none;
+}
+
+button {
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1px solid rgb(73, 72, 72);
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button a:visited {
+    color: black;
+}
+button:hover a:visited {
+    color: white;
+}
 
 #section-2 #portfolio #grid img {
     width: 100%;
@@ -144,9 +182,7 @@ nav img {
 
 /* Section 3 */
 #section-3 {
-    /* background-color: #00A2DD; */
-    background-image:url(https://images-na.ssl-images-amazon.com/images/I/61i%2BTvnalgL._AC_SL1000_.jpg) ;
-    opacity: 0.8;
+    background-image:url(https://images-na.ssl-images-amazon.com/images/I/61i%2BTvnalgL._AC_SL1000_.jpg);
     margin-top: 50px;
 }
 
