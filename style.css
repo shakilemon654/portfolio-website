@@ -156,20 +156,20 @@ button {
     outline: none;
 }
 
-button a {
+.project-link-btn a {
     text-decoration: none;
     color: black;
 }
+.project-link-btn a:visited {
+    color: black;
+}
 
-button:hover {
+.project-link-btn:hover {
     background-color: black;
     color: white;
 }
 
-button a:visited {
-    color: black;
-}
-button:hover a:visited {
+.project-link-btn:hover a:visited {
     color: white;
 }
 
@@ -273,12 +273,29 @@ button:hover a:visited {
     /* border: 1px solid red; */
     min-width: 50%;
     margin: 0px auto 0 auto;
-    padding: 50px 10px 50px 10px;
+    padding: 50px 10px 35px 10px;
     text-align: center;
     color: rgba(255,255,255,.7);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 15px;
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 15px; */
+}
+
+#section-4 div > * {
+    margin-bottom: 15px;
+}
+
+.ask-me-btn {
+    width: 150px;
+    color: white;
+}
+
+.ask-me-btn a {
+    text-decoration: none;
+    font-size: 16px;
+}
+.ask-me-btn a:visited {
+    color: white;
 }
 
 #social-icons {
@@ -387,7 +404,7 @@ button:hover a:visited {
     height: auto;
     padding: 30px 20px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-radius: 4px;
     box-shadow: 0px 0px 10px #cccccc;
     background-color: white;

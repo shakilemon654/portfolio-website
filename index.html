@@ -15,7 +15,7 @@
     <section id="section-1" class="section">
         <!---navbar-->
         <nav>
-            <p>Logo</p>
+            <p style="color: rgb(230, 223, 223);">Logo</p>
             <!--Hamburger Icon-->
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list hamburger" id="hamburger" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -45,10 +45,10 @@
             <div id="grid">
                 <div class="item" id="item1">
                     <div class="project-div">
-                        <img src="images/weather-api.JPG" alt="">
+                        <img src="weather-api.JPG" alt="">
                         <div class="project-link-div">
                             <p>Project Link</p> 
-                            <button><a href="https://shakilemon654.github.io/weather-api/"><span>Open</span></a></button>   
+                            <button class="project-link-btn"><a href="https://shakilemon654.github.io/weather-api/">Open</a></button>   
                         </div>
                     </div>
                     <h6>Weather API</h6>
@@ -59,7 +59,7 @@
                         <img src="https://images.pexels.com/photos/6320/smartphone-vintage-technology-music.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
                         <div class="project-link-div">
                             <p>Project Link</p> 
-                            <button><a href="https://shakilemon654.github.io/hard-rock/">Open</a></button>   
+                            <button class="project-link-btn"><a href="https://shakilemon654.github.io/hard-rock/">Open</a></button>   
                         </div>
                     </div>
                     <h6>Music API</h6>
@@ -70,7 +70,7 @@
                         <img src="https://images.pexels.com/photos/5632386/pexels-photo-5632386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
                         <div class="project-link-div">
                             <p>Project Link</p> 
-                            <button><a href="https://shakilemon654.github.io/gadgets-ecommerce/">Open</a></button>   
+                            <button class="project-link-btn"><a href="https://shakilemon654.github.io/gadgets-ecommerce/">Open</a></button>   
                         </div>
                     </div>
                     <h6>E-commerce site</h6>
@@ -81,7 +81,7 @@
                         <img src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
                         <div class="project-link-div">
                             <p>Project Link</p> 
-                            <button><a href="https://shakilemon654.github.io/e-school-project/">Open</a></button>   
+                            <button class="project-link-btn"><a href="https://shakilemon654.github.io/e-school-project/">Open</a></button>   
                         </div>
                     </div>
                     <h6>E-learning site</h6>
@@ -196,7 +196,8 @@
     <section id="section-4">
         <div>
             <h1>Contact Me</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, earum.</p>
+            <p>You have questions?</p>
+            <button class="ask-me-btn"><a href="contact.html">Ask Me</a></button>
             <ul id="social-icons">
                 <li><a href="" class="fa fa-facebook"></a></li>
                 <li><a href="https://www.instagram.com/shakilemon654/" class="fa fa-instagram"></a></li>
@@ -242,7 +243,7 @@
     }, 1000);
 
     // Showing Project Link Div
-    $('#item1').on('mouseenter', function(){
+    $('#item1').bind('touchstart', function(){
         $('#item1 .project-link-div').css('display', 'block');
     })
     $('#item2').on('mouseenter', function(){
@@ -262,7 +263,11 @@
     })
 
     // Hiding Project Link Div
-    $('.item').on('mouseleave', function(){
+    // $('.item').on('mouseleave', function(){
+    //     $('.project-link-div').css('display', 'none');
+    // })
+
+    $('.item').bind('touchend', function(){
         $('.project-link-div').css('display', 'none');
     })
 
