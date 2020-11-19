@@ -29,7 +29,7 @@
         <div>
             <p>Shakil Ahmed</p>
             <p>Full Stack Web Developer</p>
-            <p>Treat People With Kindness</p>
+            <p id="text-typing"></p>
         </div>
     </section>
 
@@ -218,14 +218,27 @@
 <!--JS SCRIPT-->  
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="jquery.waypoints.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
 <script src="https://use.fontawesome.com/d30a9b3175.js"></script>
 
 <script>
     $('#hamburger').on('click', () => {
         $('nav, #nav-ul').toggleClass('show');
-        console.log('clicked');
     })
+
+    /* TYPING TEXT ANIMATION IN SECTION 1 */
+
+    var i = 0;
+    var txt = "Treat People With Kindness"; /* The text */
+    var speed = 50; /* The speed/duration of the effect in milliseconds */
+    function textTyping() {
+        if (i < txt.length) {
+            document.getElementById('text-typing').innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(textTyping, 70);   
+        }
+    }
+    textTyping() /* Calling textTyping function */
 
     /* SHOWING SCROLL-TO-TOP BUTTON */
 
@@ -244,12 +257,6 @@
         document.documentElement.scrollTop = 0; /* For Chrome, Firefox, IE and Opera */
         document.body.scrollTop = 0; /* For Safari  */ 
     })
-
-    /* TEXT ANIMATION START TIME */
-
-    setTimeout(function(){
-        $('#section-1 div p:nth-child(3)').css('display', 'block');
-    }, 1000);
 
     /* SHOWING PROJECT LINK DIV */ 
 

@@ -34,16 +34,9 @@
 }
 
 #section-1 div p {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     line-height: 30px;
-}
-
-#section-1 div p:nth-child(3) {
-    display: none;
-    animation: typing-text 5s;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 nav {
@@ -308,21 +301,21 @@ button {
     
 }
 
-@keyframes flip-with-scale {
-    0% {
-        transform:perspective(400px) scaleX(1);
-    }
-    100% {
-        transform:perspective(400px) scaleX(-1);
+@media screen and (max-width: 425px){
+    #section-1 div p {
+        font-size: 6vw;
     }
 }
 
-@keyframes typing-text {
-    0% {
-        width: 0ch;
+@media screen and (min-width: 770px){
+    #section-1 div p {
+        font-size: 30px;
     }
-    100% {
-        width: 26ch;
+}
+
+@media screen and (min-width: 1030px){
+    #section-1 div p {
+        font-size: 35px;
     }
 }
 
@@ -411,6 +404,8 @@ button {
     color: white;
     border: none;
     height: 40px;
+    cursor: pointer;
+    outline: none;
 }
 .element label {
     font-size: 13px;
