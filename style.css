@@ -185,6 +185,7 @@ button {
 #section-3 {
     background-image:url(https://images-na.ssl-images-amazon.com/images/I/61i%2BTvnalgL._AC_SL1000_.jpg);
     margin-top: 50px;
+    background-size: cover;
 }
 
 .layer {
@@ -224,12 +225,11 @@ button {
     border-radius: 7px;
     margin-top: 7px;
     background-color: #50BCE4;
-    transition: all 3s linear;
+    transition: all 2s linear;
 }
 
 .skill-bar-percentage {
     /* border: 1px solid green; */
-    display: none;
     width: 0;
     height: 8px;
     border-radius: 5px;

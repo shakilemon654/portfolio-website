@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://use.fontawesome.com/d30a9b3175.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Shakil Ahmed</title>
 </head>
@@ -199,11 +197,11 @@
     <section id="section-4">
         <div>
             <h1>Contact Me</h1>
-            <p>You have questions?</p>
+            <p>You have questions? Feel free to ask me your queries.</p>
             <button class="ask-me-btn"><a href="contact.html">Ask Me</a></button>
             <ul id="social-icons">
                 <li><a href="" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/shakilemon654/" class="fa fa-instagram"></a></li>
+                <li><a href="https://github.com/shakilemon654/" class="fa fa-github"></a></li>
                 <li><a href="https://www.linkedin.com/in/shakilemon654/" class="fa fa-linkedin"></a></li>
                 <li><a href="https://twitter.com/shakilemon654" class="fa fa-twitter"></a></li>
             </ul>   
@@ -218,6 +216,10 @@
 
 
 <!--JS SCRIPT-->  
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="jquery.waypoints.min.js"></script>
+<script src="https://use.fontawesome.com/d30a9b3175.js"></script>
 
 <script>
     $('#hamburger').on('click', () => {
@@ -276,17 +278,16 @@
         $('.project-link-div').css('display', 'none');
     })
 
-    // $('.item').bind('touchend', function(){
-    //     $('.project-link-div').css('display', 'none');
-    // })
+    /* SECTION 3 BAR ANIMATION USING WAYPOINTS*/
 
-    /* SECTION 3 BAR ANIMATION */
-
-    $(".skill-bar").each(function(){
+    var $skillBarPercentage = $('.skill-bar-percentage');
+    $skillBarPercentage.waypoint(function() {
+        $(".skill-bar").each(function(){
         $(this).find(".skill-bar-percentage").animate({
             width: $(this).attr("data-width")   
         }, 3000)
     });
+    }, { offset: '98%' });
 
     /* STARTING ANIMATION WHEN SCROLL DOWN */
 
