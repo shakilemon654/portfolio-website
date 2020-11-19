@@ -253,13 +253,13 @@ button {
     margin-bottom: 15px;
 }
 
-.ask-me-btn {
+.ask-me-btn{
     width: 150px;
-    color: white;
 }
 
 .ask-me-btn a {
     text-decoration: none;
+    color: white;
     font-size: 16px;
 }
 .ask-me-btn a:visited {
@@ -303,7 +303,7 @@ button {
 
 @media screen and (max-width: 425px){
     #section-1 div p {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
 
